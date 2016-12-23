@@ -1,0 +1,27 @@
+{
+  "name": "CN DevSite",
+  "description": "When available, automatically maps Google devsites to its CN mirrors",
+  "version": "0.10",
+  
+  "permissions": [
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.google.com/",
+    "*://*.android.com/"
+  ],
+  
+  "background": {
+    "persistent" : true,
+    "scripts": ["mirrors.js", "bg.js"]
+  },
+  
+  "icons": {
+    "128": "on.png"
+  },
+  
+  "browser_action": {},
+  
+  "manifest_version": 2
+}
