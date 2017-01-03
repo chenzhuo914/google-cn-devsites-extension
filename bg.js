@@ -12,7 +12,7 @@ function toggleState(currentState) {
 function reset(currentState) {
   if (currentState === "on") {
     chrome.browserAction.setIcon({path: "on.png"});
-    chrome.browserAction.setTitle({title: "ON"});
+    chrome.browserAction.setTitle({title: "Status: ON"});
     chrome.webRequest.onBeforeRequest.addListener(
     	redirect_listener,
     	{
@@ -23,7 +23,7 @@ function reset(currentState) {
   }
   else {
     chrome.browserAction.setIcon({path: "off.png"});
-    chrome.browserAction.setTitle({title: "OFF"});
+    chrome.browserAction.setTitle({title: "Status: OFF"});
     chrome.webRequest.onBeforeRequest.removeListener(redirect_listener);
   }
 }
