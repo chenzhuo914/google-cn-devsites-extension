@@ -9,7 +9,8 @@
     "webRequest",
     "webRequestBlocking",
     "*://*.google.com/",
-    "*://*.android.com/"
+    "*://*.android.com/",
+    "*://*.angular.io/"
   ],
   
   "background": {
