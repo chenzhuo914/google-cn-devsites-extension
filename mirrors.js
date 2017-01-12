@@ -1,7 +1,8 @@
 var mirrors = {
-  "developers.google.com" : "developers.google.cn",
-  "firebase.google.com" : "firebase.google.cn",
-  "developer.android.com" : "developer.android.google.cn"
+  "//developers.google.com" : "//developers.google.cn",
+  "//firebase.google.com" : "//firebase.google.cn",
+  "//developer.android.com" : "//developer.android.google.cn",
+  "//angular.io" : "//angular.cn"
 }
 
 function mirrorUrl(url) {
