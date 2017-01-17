@@ -15,7 +15,7 @@
   
   "background": {
     "persistent" : true,
-    "scripts": ["mirrors.js", "bg.js"]
+    "scripts": ["config.js", "bg.js"]
   },
   
   "icons": {
