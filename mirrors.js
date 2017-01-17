@@ -10,6 +10,7 @@ var mirrors = {
 var whitelist = [
   "//developers.google.com/groups",
   "//developers.google.com/events",
+  "//firebase.google.com/support/contact/",
 ]
 
 function mirrorUrl(url) {
