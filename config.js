@@ -4,6 +4,7 @@ var mirrors = {
   "//firebase.google.com"   : "//firebase.google.cn",
   "//developer.android.com" : "//developer.android.google.cn",
   "//angular.io"            : "//angular.cn",
+  "google.com/maps"         : "google.cn/maps",
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
