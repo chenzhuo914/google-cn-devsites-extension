@@ -4,6 +4,7 @@ var mirrors = {
   "//firebase.google.com"   : "//firebase.google.cn",
   "//developer.android.com" : "//developer.android.google.cn",
   "//angular.io"            : "//angular.cn",
+  "//maps.google.com"       : "//maps.google.cn",
   "google.com/maps"         : "google.cn/maps",
 }
 
