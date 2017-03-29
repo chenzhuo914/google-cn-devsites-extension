@@ -6,6 +6,7 @@ var mirrors = {
   "//angular.io"            : "//angular.cn",
   "//maps.google.com"       : "//maps.google.cn",
   "google.com/maps"         : "google.cn/maps",
+  "//translate.google.com"  : "//translate.google.cn",
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
