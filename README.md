@@ -8,6 +8,8 @@
 | firebase.google.com  | firebase.google.cn |
 | developer.android.com | developer.android.google.cn |
 | angular.io | angular.cn|
+| code-labs.io | code-labs.cn|
+| codelabs.developers.google.com | code-labs.cn|
 
 同时它还包含一些其他谷歌服务的网址映射：
 

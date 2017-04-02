@@ -1,12 +1,14 @@
 // These URL paths will be transformed to CN mirrors.
 var mirrors = {
-  "//developers.google.com" : "//developers.google.cn",
-  "//firebase.google.com"   : "//firebase.google.cn",
-  "//developer.android.com" : "//developer.android.google.cn",
-  "//angular.io"            : "//angular.cn",
-  "//maps.google.com"       : "//maps.google.cn",
-  "google.com/maps"         : "google.cn/maps",
-  "//translate.google.com"  : "//translate.google.cn",
+  "//developers.google.com"           : "//developers.google.cn",
+  "//firebase.google.com"             : "//firebase.google.cn",
+  "//developer.android.com"           : "//developer.android.google.cn",
+  "//angular.io"                      : "//angular.cn",
+  "//maps.google.com"                 : "//maps.google.cn",
+  "google.com/maps"                   : "google.cn/maps",
+  "//translate.google.com"            : "//translate.google.cn",
+  "//codelabs.developers.google.com"  : "//code-labs.cn",
+  "//code-labs.io"                    : "//code-labs.cn"
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
@@ -26,10 +28,10 @@ function mirrorUrl(url) {
   
   // Check for mapping.
   for (var key in mirrors) {
-  	if (url.includes(key)) {
-  		url = url.replace(key, mirrors[key]);
-  		break;
-  	}
+    if (url.includes(key)) {
+        url = url.replace(key, mirrors[key]);
+        break;
+    }
   }
   return url;
 }
