@@ -29,8 +29,8 @@ function mirrorUrl(url) {
   // Check for mapping.
   for (var key in mirrors) {
     if (url.includes(key)) {
-        url = url.replace(key, mirrors[key]);
-        break;
+      url = url.replace(key, mirrors[key]);
+      break;
     }
   }
   return url;
