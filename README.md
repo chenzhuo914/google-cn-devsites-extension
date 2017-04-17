@@ -11,6 +11,7 @@
 | code-labs.io | code-labs.cn |
 | codelabs.developers.google.com | code-labs.cn |
 | developers.googleblog.com | developers.googleblog.cn |
+| material.io | md.gl |
 
 同时它还包含一些其他谷歌服务的网址映射：
 

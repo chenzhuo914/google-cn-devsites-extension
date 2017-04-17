@@ -12,7 +12,8 @@
     "*://*.android.com/",
     "*://*.angular.io/",
     "*://*.code-labs.io/",
-    "*://*.googleblog.com/"
+    "*://*.googleblog.com/",
+    "*://*.material.io/"
   ],
   
   "background": {
