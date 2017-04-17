@@ -9,7 +9,8 @@ var mirrors = {
   "google.com/maps"                   : "google.cn/maps",
   "//translate.google.com"            : "//translate.google.cn",
   "//codelabs.developers.google.com"  : "//code-labs.cn",
-  "//code-labs.io"                    : "//code-labs.cn"
+  "//code-labs.io"                    : "//code-labs.cn",
+  "//developers.googleblog.com"       : "//developers.googleblog.cn"
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.

@@ -1,5 +1,3 @@
-var bkg = chrome.extension.getBackgroundPage();
-
 var redirect_listener = function(details) {
   var url = mirrorUrl(details.url);
   return {redirectUrl : url};

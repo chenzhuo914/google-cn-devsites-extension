@@ -7,14 +7,16 @@
 | developers.google.com  | developers.google.cn |
 | firebase.google.com  | firebase.google.cn |
 | developer.android.com | developer.android.google.cn |
-| angular.io | angular.cn|
-| code-labs.io | code-labs.cn|
-| codelabs.developers.google.com | code-labs.cn|
+| angular.io | angular.cn |
+| code-labs.io | code-labs.cn |
+| codelabs.developers.google.com | code-labs.cn |
+| developers.googleblog.com | developers.googleblog.cn |
 
 同时它还包含一些其他谷歌服务的网址映射：
 
 | 映射前网址 | 映射后网址 |
 | ------------- | ------------- |
 | maps.google.com | maps.google.cn |
+| ditu.google.com | ditu.google.cn |
 | google.com/maps | google.cn/maps |
 | translate.google.com | translate.google.cn |
