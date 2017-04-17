@@ -5,6 +5,7 @@ var mirrors = {
   "//developer.android.com"           : "//developer.android.google.cn",
   "//angular.io"                      : "//angular.cn",
   "//maps.google.com"                 : "//maps.google.cn",
+  "//ditu.google.com"                 : "//ditu.google.cn",
   "google.com/maps"                   : "google.cn/maps",
   "//translate.google.com"            : "//translate.google.cn",
   "//codelabs.developers.google.com"  : "//code-labs.cn",
