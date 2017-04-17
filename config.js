@@ -12,6 +12,7 @@ var mirrors = {
   "//code-labs.io"                    : "//code-labs.cn",
   "//developers.googleblog.com"       : "//developers.googleblog.cn",
   "//material.io"                     : "//md.gl",
+  "//developerstudyjams.com"          : "//studyjamscn.com",
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.

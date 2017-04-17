@@ -13,7 +13,8 @@
     "*://*.angular.io/",
     "*://*.code-labs.io/",
     "*://*.googleblog.com/",
-    "*://*.material.io/"
+    "*://*.material.io/",
+    "*://*.developerstudyjams.com/"
   ],
   
   "background": {

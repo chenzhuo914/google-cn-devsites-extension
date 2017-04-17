@@ -12,6 +12,7 @@
 | codelabs.developers.google.com | code-labs.cn |
 | developers.googleblog.com | developers.googleblog.cn |
 | material.io | md.gl |
+| developerstudyjams.com | studyjamscn.com |
 
 同时它还包含一些其他谷歌服务的网址映射：
 
