@@ -1,4 +1,6 @@
 {
+  "manifest_version": 2,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3nPoIyCJK7pRbZRkgUJeMHKBapMTSn/Iop1gTt5lvR4VesdO7KdDvEf97lfzck0hBA/ZtTGwKp5WZn6CEPB5ySBWCVajT6ZC716wg6qotSkZMDg+z8BnFOWIgjB1PU4mbt59Mv11YkMq8/K03wQMGTyFqENOSp1XZY04GRil/FPEL53Qs5mWLubfNiiZc59WwOxocsSKCxItBDnK2wu43GfVr7drESHifzWXD7v+5nA/T/IH4PUYsPYKhDzz5l4iAaNqPEf3jwpHrC3+2wtIKZ0lfcEqwQsLSbtvW+/gTUEkJEejnibXwWPkcNj1NZ7Xl1mqJyO1zzzlBiZb53c1TQIDAQAB",
   "name": "Google CN DevSites",
   "description": "When available, automatically maps Google devsites to its CN mirrors",
   "version": "0.18",
@@ -26,7 +28,5 @@
     "128": "on.png"
   },
   
-  "browser_action": {},
-  
-  "manifest_version": 2
+  "browser_action": {}
 }
