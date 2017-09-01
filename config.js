@@ -31,7 +31,7 @@ function mirrorUrl(url) {
       return url;
     }
   }
-  
+
   // Check for mapping.
   for (var key in mirrors) {
     if (url.includes(key)) {
@@ -41,3 +41,4 @@ function mirrorUrl(url) {
   }
   return url;
 }
+

@@ -4,7 +4,7 @@ var redirect_listener = function(details) {
 };
 
 function toggleState(currentState) {
-	return currentState === "on" ? "off" : "on";
+  return currentState === "on" ? "off" : "on";
 }
 
 function reset(currentState) {
@@ -12,8 +12,8 @@ function reset(currentState) {
     chrome.browserAction.setIcon({path: "on.png"});
     chrome.browserAction.setTitle({title: "Status: ON"});
     chrome.webRequest.onBeforeRequest.addListener(
-    	redirect_listener,
-    	{
+      redirect_listener,
+      {
         urls : ["<all_urls>"],
         types : ["main_frame", "sub_frame"]
       },
@@ -28,13 +28,13 @@ function reset(currentState) {
 
 // Default to "on".
 if (localStorage.currentState == undefined) {
-	localStorage.currentState = "on";
+  localStorage.currentState = "on";
 }
 reset(localStorage.currentState);
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-	var currentState = toggleState(localStorage.currentState);
-	reset(currentState);
+  var currentState = toggleState(localStorage.currentState);
+  reset(currentState);
   localStorage.currentState = currentState;
 });
 
