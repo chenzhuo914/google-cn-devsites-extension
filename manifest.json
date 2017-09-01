@@ -12,7 +12,7 @@
     "webRequestBlocking",
     "*://*.google.com/",
     "*://*.android.com/",
-    "*://*.tensorflow.com/",
+    "*://*.tensorflow.org/",
     "*://*.angular.io/",
     "*://*.code-labs.io/",
     "*://*.googleblog.com/",
