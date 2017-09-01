@@ -7,6 +7,8 @@
 | developers.google.com  | developers.google.cn |
 | firebase.google.com  | firebase.google.cn |
 | developer.android.com | developer.android.google.cn |
+| source.android.com | source.android.google.cn |
+| www.tensorflow.org | orflow.google.cn |
 | angular.io | angular.cn |
 | code-labs.io | code-labs.cn |
 | codelabs.developers.google.com | code-labs.cn |
