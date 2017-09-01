@@ -3,6 +3,8 @@ var mirrors = {
   "//developers.google.com"           : "//developers.google.cn",
   "//firebase.google.com"             : "//firebase.google.cn",
   "//developer.android.com"           : "//developer.android.google.cn",
+  "//source.android.com"              : "//source.android.google.cn",
+  "//www.tensorflow.org"              : "//tensorflow.google.cn",
   "//angular.io"                      : "//angular.cn",
   "//maps.google.com"                 : "//maps.google.cn",
   "//ditu.google.com"                 : "//ditu.google.cn",
