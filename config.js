@@ -10,6 +10,7 @@ var mirrors = {
   "//ditu.google.com"                 : "//ditu.google.cn",
   "google.com/maps"                   : "google.cn/maps",
   "//translate.google.com"            : "//translate.google.cn",
+  "//careers.google.com"              : "//careers.google.cn",
   "//codelabs.developers.google.com"  : "//code-labs.cn",
   "//code-labs.io"                    : "//code-labs.cn",
   "//developers.googleblog.com"       : "//developers.googleblog.cn",
