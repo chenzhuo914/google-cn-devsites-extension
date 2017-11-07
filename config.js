@@ -23,6 +23,7 @@ var whitelist = [
   "//developers.google.com/groups",
   "//developers.google.com/events",
   "//firebase.google.com/support/contact/",
+  "//careers.google.com/jobs",
 ]
 
 function mirrorUrl(url) {
