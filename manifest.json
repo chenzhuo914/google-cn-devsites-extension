@@ -17,7 +17,8 @@
     "*://*.code-labs.io/",
     "*://*.googleblog.com/",
     "*://*.material.io/",
-    "*://*.developerstudyjams.com/"
+    "*://*.developerstudyjams.com/",
+    "*://*.golang.org/"
   ],
   
   "background": {
