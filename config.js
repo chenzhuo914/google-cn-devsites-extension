@@ -17,6 +17,7 @@ var mirrors = {
   "//material.io"                     : "//md.gl",
   "//developerstudyjams.com"          : "//studyjamscn.com",
   "//finance.google.com"              : "//caijing.google.cn",
+  "//golang.org"                      : "//golang.google.cn"
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.

@@ -15,6 +15,7 @@
 | developers.googleblog.com | developers.googleblog.cn |
 | material.io | md.gl |
 | developerstudyjams.com | studyjamscn.com |
+| golang.org | golang.google.cn |
 
 同时它还包含一些其他 Google 服务的网址映射：
 
