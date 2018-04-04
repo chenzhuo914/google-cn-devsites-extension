@@ -13,9 +13,6 @@ var mirrors = {
   "//careers.google.com"              : "//careers.google.cn",
   "//codelabs.developers.google.com"  : "//code-labs.cn",
   "//code-labs.io"                    : "//code-labs.cn",
-  "//developers.googleblog.com"       : "//developers.googleblog.cn",
-  "//material.io"                     : "//md.gl",
-  "//developerstudyjams.com"          : "//studyjamscn.com",
   "//finance.google.com"              : "//caijing.google.cn",
   "//golang.org"                      : "//golang.google.cn"
 }
