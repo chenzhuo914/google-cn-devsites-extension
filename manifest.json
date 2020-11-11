@@ -6,15 +6,12 @@
   "version": "0.22",
   
   "permissions": [
-    "storage",
-    "tabs",
     "webRequest",
     "webRequestBlocking",
     "*://*.google.com/",
     "*://*.android.com/",
     "*://*.tensorflow.org/",
     "*://*.angular.io/",
-    "*://*.code-labs.io/",
     "*://*.golang.org/"
   ],
   

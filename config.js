@@ -6,14 +6,8 @@ var mirrors = {
   "//source.android.com"              : "//source.android.google.cn",
   "//www.tensorflow.org"              : "//tensorflow.google.cn",
   "//angular.io"                      : "//angular.cn",
-  "//maps.google.com"                 : "//maps.google.cn",
-  "//ditu.google.com"                 : "//ditu.google.cn",
-  "google.com/maps"                   : "google.cn/maps",
   "//translate.google.com"            : "//translate.google.cn",
   "//careers.google.com"              : "//careers.google.cn",
-  "//codelabs.developers.google.com"  : "//code-labs.cn",
-  "//code-labs.io"                    : "//code-labs.cn",
-  "//finance.google.com"              : "//caijing.google.cn",
   "//golang.org"                      : "//golang.google.cn"
 }
 
@@ -23,7 +17,6 @@ var whitelist = [
   "//developers.google.com/events",
   "//firebase.google.com/support/contact/",
   "//careers.google.com/jobs",
-  "//finance.google.com/finance/portfolio",
 ]
 
 function mirrorUrl(url) {
