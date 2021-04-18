@@ -8,15 +8,14 @@ var mirrors = {
   "//angular.io"                      : "//angular.cn",
   "//translate.google.com"            : "//translate.google.cn",
   "//careers.google.com"              : "//careers.google.cn",
-  "//golang.org"                      : "//golang.google.cn"
+  "//golang.org"                      : "//golang.google.cn",
+  "//sum.golang.org"                  : "//sum.golang.google.cn"
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
 var whitelist = [
-  "//developers.google.com/groups",
-  "//developers.google.com/events",
   "//firebase.google.com/support/contact/",
-  "//careers.google.com/jobs",
+  "//careers.google.com/jobs"
 ]
 
 function mirrorUrl(url) {
