@@ -37,14 +37,13 @@ jobs:
     - name: package files
       run: |
         zip -q "${{ steps.get-version.outputs.result }}.zip" bg.js manifest.json rules.json
-        ls -l
     
     - name: Create Release
       id: create_release
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          ${{ steps.get-version.outputs.result }}.zip
+          google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip
         tag_name: ${{ steps.get-version.outputs.result }}
         name: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}
         body: ${{ env.MESSAGE }}
