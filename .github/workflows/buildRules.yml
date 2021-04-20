@@ -36,7 +36,7 @@ jobs:
     
     - name: package files
       run: |
-        zip -q "${{ steps.get-version.outputs.result }}.zip" bg.js manifest.json rules.json
+        zip -q "google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip" bg.js manifest.json rules.json off.png on.png
     
     - name: Create Release
       id: create_release
