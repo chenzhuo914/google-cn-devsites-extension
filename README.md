@@ -4,8 +4,8 @@
 
 | 映射前网址 | 映射后网址 |
 | ------------- | ------------- |
-| developers.google.com  | developers.google.cn |
-| firebase.google.com  | firebase.google.cn |
+| developers.google.com | developers.google.cn |
+| firebase.google.com | firebase.google.cn |
 | developer.android.com | developer.android.google.cn |
 | source.android.com | source.android.google.cn |
 | www.tensorflow.org | tensorflow.google.cn |
