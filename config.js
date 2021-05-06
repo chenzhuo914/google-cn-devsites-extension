@@ -14,7 +14,6 @@ var mirrors = {
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
 var whitelist = [
-  "//firebase.google.com/support/contact/",
   "//careers.google.com/jobs"
 ]
 
