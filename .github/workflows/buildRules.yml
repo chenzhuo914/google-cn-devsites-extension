@@ -9,6 +9,9 @@ on:
     tags:
     - '*'
 
+env:
+  MESSAGE: ${{ github.event.inputs.MESSAGE }}
+
 jobs:
   release:
     name: Release on GitHub
@@ -39,13 +42,9 @@ jobs:
         zip -q "google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip" bg.js manifest.json rules.json off.png on.png
     
     - name: Create Release
-      id: create_release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: |
-          google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip
-        tag_name: ${{ steps.get-version.outputs.result }}
-        name: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}
-        body: ${{ env.MESSAGE }}
+      run: |
+        gh release create ${{ steps.get-version.outputs.result }} -n "${{ env.MESSAGE }}" -t "${{ env.name }}" ${{ env.files }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}
+        files: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip
