@@ -2,3 +2,6 @@
 .project
 _metadata
 rules.json
+node_modules/
+google_cn_devsites.zip
+

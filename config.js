@@ -13,15 +13,15 @@ var mirrors = {
 }
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
-var whitelist = [
+var skiplist = [
   "//careers.google.com/jobs"
 ]
 
 function redirectRules() {
   let res = []
   let id = 1
-  for (const index in whitelist) {
-    const url = whitelist[index]
+  for (var index in skiplist) {
+    var url = skiplist[index]
     res.push({
       "id": id++,
       "action": {
@@ -55,13 +55,38 @@ function redirectRules() {
   return res
 }
 
-// Export rules to 'rules.json'
-// Node.js is required
-const fs = require('fs')
+// Export rules to 'rules.json' (node.js is required)
+var fs = require('fs')
 fs.writeFile('rules.json', JSON.stringify(redirectRules()), err => {
   if (err) {
-    console.log(err)
+    console.error(err)
+	return
   } else {
-    console.log('rules.json created')
+    console.log('rules.json created.')
   }
 })
+
+// Generate 'google_cn_devsites.zip' (module 'archiever' is required)
+var archiver = require('archiver')
+var archive = archiver('zip')
+var os = fs.createWriteStream('google_cn_devsites.zip')
+
+os.on('close', function() {
+    console.log('google_cn_devsites.zip created.')
+})
+
+archive.on('error', function(err){
+    console.error(err)
+	return
+})
+
+archive.pipe(os)
+
+// Files in zip: bg.js, manifest.json, rules.json, off.png, on.png
+archive
+  .append(fs.createReadStream('bg.js'), {name: 'bg.js'})
+  .append(fs.createReadStream('manifest.json'), {name: 'manifest.json'})
+  .append(fs.createReadStream('rules.json'), {name: 'rules.json'})
+  .append(fs.createReadStream('off.png'), {name: 'off.png'})
+  .append(fs.createReadStream('on.png'), {name: 'on.png'})
+  .finalize()
