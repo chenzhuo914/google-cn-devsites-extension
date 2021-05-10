@@ -1,0 +1,50 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      MESSAGE:
+        description: 'message for release body'
+
+  push:
+    tags:
+    - '*'
+
+env:
+  MESSAGE: ${{ github.event.inputs.MESSAGE }}
+
+jobs:
+  release:
+    name: Release on GitHub
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    # get version from manifest.json
+    - uses: actions/github-script@v3
+      id: get-version
+      with:
+        result-encoding: string
+        script: |
+          const fs = require('fs')
+          const manifest = JSON.parse(fs.readFileSync('manifest.json'))
+          return 'v' + manifest.version
+
+    - name: generate rules
+      run: |
+        node ./config.js
+    
+    - name: package files
+      run: |
+        zip -q "google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip" bg.js manifest.json rules.json off.png on.png
+    
+    - name: Create Release
+      run: |
+        gh release create ${{ steps.get-version.outputs.result }} -n "${{ env.MESSAGE }}" -t "${{ env.name }}" ${{ env.files }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}
+        files: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip

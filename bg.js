@@ -1,40 +1,41 @@
-var redirect_listener = function(details) {
-  var url = mirrorUrl(details.url);
-  return {redirectUrl : url};
-};
-
 function toggleState(currentState) {
   return currentState === "on" ? "off" : "on";
 }
 
 function reset(currentState) {
   if (currentState === "on") {
-    chrome.browserAction.setIcon({path: "on.png"});
-    chrome.browserAction.setTitle({title: "Status: ON"});
-    chrome.webRequest.onBeforeRequest.addListener(
-      redirect_listener,
-      {
-        urls : ["<all_urls>"],
-        types : ["main_frame", "sub_frame"]
-      },
-      [ "blocking" ]);
+    chrome.action.setIcon({ path: "on.png" });
+    chrome.action.setTitle({ title: "Status: ON" });
+
+    chrome.declarativeNetRequest.updateEnabledRulesets({
+      "enableRulesetIds": ["ruleset_1"]
+    })
   }
   else {
-    chrome.browserAction.setIcon({path: "off.png"});
-    chrome.browserAction.setTitle({title: "Status: OFF"});
-    chrome.webRequest.onBeforeRequest.removeListener(redirect_listener);
+    chrome.action.setIcon({ path: "off.png" });
+    chrome.action.setTitle({ title: "Status: OFF" });
+
+    chrome.declarativeNetRequest.updateEnabledRulesets({
+      "disableRulesetIds": ["ruleset_1"]
+    })
   }
 }
 
 // Default to "on".
-if (localStorage.currentState == undefined) {
-  localStorage.currentState = "on";
-}
-reset(localStorage.currentState);
+chrome.storage.local.get(['currentState'], function (result) {
+  if (result.currentState === undefined) {
+    chrome.storage.local.set({ currentState: "on" })
+  }
+})
 
-chrome.browserAction.onClicked.addListener(function(tab) {
-  var currentState = toggleState(localStorage.currentState);
-  reset(currentState);
-  localStorage.currentState = currentState;
+chrome.storage.local.get(['currentState'], result => {
+  reset(result.currentState);
+})
+
+chrome.action.onClicked.addListener(function (tab) {
+  chrome.storage.local.get(['currentState'], result => {
+    const currentState = toggleState(result.currentState);
+    reset(currentState);
+    chrome.storage.local.set({ currentState: currentState });
+  })
 });
-
