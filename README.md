@@ -11,6 +11,7 @@
 | www.tensorflow.org | tensorflow.google.cn |
 | angular.io | angular.cn |
 | golang.org | golang.google.cn |
+| sum.golang.org | sum.golang.google.cn |
 
 同时它还包含一些其他 Google 服务的网址映射：
 
