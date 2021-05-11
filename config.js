@@ -65,28 +65,3 @@ fs.writeFile('rules.json', JSON.stringify(redirectRules()), err => {
     console.log('rules.json created.')
   }
 })
-
-// Generate 'google_cn_devsites.zip' (module 'archiever' is required)
-var archiver = require('archiver')
-var archive = archiver('zip')
-var os = fs.createWriteStream('google_cn_devsites.zip')
-
-os.on('close', function() {
-    console.log('google_cn_devsites.zip created.')
-})
-
-archive.on('error', function(err){
-    console.error(err)
-	return
-})
-
-archive.pipe(os)
-
-// Files in zip: bg.js, manifest.json, rules.json, off.png, on.png
-archive
-  .append(fs.createReadStream('bg.js'), {name: 'bg.js'})
-  .append(fs.createReadStream('manifest.json'), {name: 'manifest.json'})
-  .append(fs.createReadStream('rules.json'), {name: 'rules.json'})
-  .append(fs.createReadStream('off.png'), {name: 'off.png'})
-  .append(fs.createReadStream('on.png'), {name: 'on.png'})
-  .finalize()
