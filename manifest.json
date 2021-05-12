@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Google CN DevSites",
   "description": "When available, automatically maps Google devsites to its CN mirrors",
-  "version": "0.24",
+  "version": "0.25",
   
   "permissions": [
     "declarativeNetRequest",
