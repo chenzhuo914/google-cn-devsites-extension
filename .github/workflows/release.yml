@@ -39,12 +39,12 @@ jobs:
     
     - name: package files
       run: |
-        zip -q "google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip" bg.js manifest.json rules.json off.png on.png
+        zip -q "google_cn_devsites.zip" bg.js manifest.json rules.json off.png on.png
     
     - name: Create Release
       run: |
         gh release create ${{ steps.get-version.outputs.result }} -n "${{ env.MESSAGE }}" -t "${{ env.name }}" ${{ env.files }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        name: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}
-        files: google-cn-devsites-extension_${{ steps.get-version.outputs.result }}.zip
+        name: google_cn_devsites-${{ steps.get-version.outputs.result }}
+        files: google_cn_devsites.zip
