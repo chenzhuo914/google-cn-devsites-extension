@@ -19,13 +19,14 @@ function reset(currentState) {
       "disableRulesetIds": ["ruleset_1"]
     })
   }
+  
+  chrome.storage.local.set({ currentState: currentState });
 }
 
 // init state
 chrome.storage.local.get(['currentState'], result => {
   if (result.currentState === undefined) {
     result.currentState = "on"; // default to "on"
-    chrome.storage.local.set({ currentState: result.currentState });
   }
   reset(result.currentState); // reset state
 })
@@ -34,6 +35,5 @@ chrome.action.onClicked.addListener(function (tab) {
   chrome.storage.local.get(['currentState'], result => {
     const currentState = toggleState(result.currentState);
     reset(currentState);
-    chrome.storage.local.set({ currentState: currentState });
   })
 });
