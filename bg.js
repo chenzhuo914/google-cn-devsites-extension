@@ -21,15 +21,13 @@ function reset(currentState) {
   }
 }
 
-// Default to "on".
-chrome.storage.local.get(['currentState'], function (result) {
-  if (result.currentState === undefined) {
-    chrome.storage.local.set({ currentState: "on" })
-  }
-})
-
+// init state
 chrome.storage.local.get(['currentState'], result => {
-  reset(result.currentState);
+  if (result.currentState === undefined) {
+    result.currentState = "on"; // default to "on"
+    chrome.storage.local.set({ currentState: result.currentState });
+  }
+  reset(result.currentState); // reset state
 })
 
 chrome.action.onClicked.addListener(function (tab) {
