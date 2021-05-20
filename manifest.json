@@ -19,6 +19,7 @@
     "*://*.google.com/*",
     "*://*.android.com/*",
     "*://*.tensorflow.org/*",
+    "*://*.tfhub.dev/*",
     "*://*.angular.io/*",
     "*://*.golang.org/*"
   ],

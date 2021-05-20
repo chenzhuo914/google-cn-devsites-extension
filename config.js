@@ -5,6 +5,7 @@ var mirrors = {
   "//developer.android.com"     : "developer.android.google.cn",
   "//source.android.com"        : "source.android.google.cn",
   "//www.tensorflow.org"        : "tensorflow.google.cn",
+  "//tfhub.dev"                 : "hub.tensorflow.google.cn",
   "//angular.io"                : "angular.cn",
   "//translate.google.com"      : "translate.google.cn",
   "//careers.google.com"        : "careers.google.cn",

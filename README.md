@@ -9,6 +9,7 @@
 | developer.android.com | developer.android.google.cn |
 | source.android.com | source.android.google.cn |
 | www.tensorflow.org | tensorflow.google.cn |
+| tfhub.dev | hub.tensorflow.google.cn |
 | angular.io | angular.cn |
 | golang.org | golang.google.cn |
 | sum.golang.org | sum.golang.google.cn |
