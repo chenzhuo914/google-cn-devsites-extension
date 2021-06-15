@@ -11,18 +11,17 @@ var mirrors = {
   "//careers.google.com"        : "careers.google.cn",
   "//golang.org"                : "golang.google.cn",
   "//sum.golang.org"            : "sum.golang.google.cn"
-}
+};
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
 var skiplist = [
   "//careers.google.com/jobs"
-]
+];
 
 function redirectRules() {
-  let res = []
-  let id = 1
-  for (var index in skiplist) {
-    var url = skiplist[index]
+  let res = [];
+  let id = 1;
+  for (const url of skiplist) {
     res.push({
       "id": id++,
       "action": {
@@ -33,9 +32,9 @@ function redirectRules() {
         "excludedResourceTypes": ["other"],
         "isUrlFilterCaseSensitive": false
       }
-    })
+    });
   }
-  for (let key in mirrors) {
+  for (const key in mirrors) {
     res.push({
       "id": id++,
       "action": {
@@ -51,18 +50,17 @@ function redirectRules() {
         "excludedResourceTypes": ["other"],
         "isUrlFilterCaseSensitive": false
       }
-    })
+    });
   }
-  return res
+  return res;
 }
 
 // Export rules to 'rules.json' (node.js is required)
-var fs = require('fs')
+const fs = require('fs');
 fs.writeFile('rules.json', JSON.stringify(redirectRules()), err => {
   if (err) {
-    console.error(err)
-	return
+    console.error(err);
   } else {
-    console.log('rules.json created.')
+    console.log('rules.json created.');
   }
-})
+});
