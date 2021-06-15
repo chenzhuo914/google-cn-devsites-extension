@@ -9,31 +9,32 @@ function reset(currentState) {
 
     chrome.declarativeNetRequest.updateEnabledRulesets({
       "enableRulesetIds": ["ruleset_1"]
-    })
-  }
-  else {
+    });
+  } else {
     chrome.action.setIcon({ path: "off.png" });
     chrome.action.setTitle({ title: "Status: OFF" });
 
     chrome.declarativeNetRequest.updateEnabledRulesets({
       "disableRulesetIds": ["ruleset_1"]
-    })
+    });
   }
-  
+
   chrome.storage.local.set({ currentState: currentState });
 }
 
 // init state
-chrome.storage.local.get(['currentState'], result => {
-  if (result.currentState === undefined) {
-    result.currentState = "on"; // default to "on"
-  }
-  reset(result.currentState); // reset state
-})
+chrome.runtime.onStartup.addListener(() => {
+  chrome.storage.local.get("currentState", result => {
+    if (result.currentState === undefined) {
+      result.currentState = "on"; // default to "on"
+    }
+    reset(result.currentState); // reset state
+  });
+});
 
-chrome.action.onClicked.addListener(function (tab) {
-  chrome.storage.local.get(['currentState'], result => {
+chrome.action.onClicked.addListener(tab => {
+  chrome.storage.local.get("currentState", result => {
     const currentState = toggleState(result.currentState);
     reset(currentState);
-  })
+  });
 });
