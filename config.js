@@ -15,7 +15,8 @@ var mirrors = {
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
 var skiplist = [
-  "//careers.google.com/jobs"
+  "//careers.google.com/jobs",
+  "//golang.org/issue"
 ];
 
 function redirectRules() {
