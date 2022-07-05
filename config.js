@@ -9,14 +9,14 @@ var mirrors = {
   "//angular.io"                : "angular.cn",
   "//translate.google.com"      : "translate.google.cn",
   "//careers.google.com"        : "careers.google.cn",
+  "//go.dev"                    : "golang.google.cn",
   "//golang.org"                : "golang.google.cn",
   "//sum.golang.org"            : "sum.golang.google.cn"
 };
 
 // These URL paths are not available on CN mirrors, therefore won't be transformed.
 var skiplist = [
-  "//careers.google.com/jobs",
-  "//golang.org/issue"
+  "//careers.google.com/jobs"
 ];
 
 function redirectRules() {

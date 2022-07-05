@@ -11,6 +11,7 @@
 | www.tensorflow.org | tensorflow.google.cn |
 | tfhub.dev | hub.tensorflow.google.cn |
 | angular.io | angular.cn |
+| go.dev | golang.google.cn |
 | golang.org | golang.google.cn |
 | sum.golang.org | sum.golang.google.cn |
 
