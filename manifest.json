@@ -21,7 +21,11 @@
     "*://*.tensorflow.org/*",
     "*://*.tfhub.dev/*",
     "*://*.angular.io/*",
-    "*://*.golang.org/*"
+    "*://*.golang.org/*",
+    "*://*.gstatic.com/*",
+    "*://*.googleapis.com/*",
+    "*://*.google.cn/*",
+    "*://*.gstatic.cn/*"
   ],
   
   "background": {
